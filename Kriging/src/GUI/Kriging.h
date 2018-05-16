@@ -44,7 +44,8 @@ private:
 	void foundParametersExpoModel();
 
 private:
-	const int SIZE_WORLD  = 640;
+	//const int SIZE_WORLD  = 640;
+	const int SIZE_WORLD  = 1000;
 	int sizeValues;
 	std::vector<double> valuesX,valuesY,valuesZ;
 	int threadsDistanceCalc;

@@ -21,6 +21,7 @@ public:
 private:
 	Gtk::Frame mainFrame,dataFrame,dataRamdomFrame,tableFrame,dataComputedFrame,graphicModelFrame;
 	Gtk::Frame setupEmpiricalSemivariogramFrame,empiricalSemivariogramFrame,setupBinningSemivariogramFrame,binningSemivariogramFrame;
+	Gtk::Frame frameMatrix;
 	Gtk::Grid gridData,gridDataRamdom,gridDataTable,gridLoadDataTable;
 	Gtk::Grid gridSetupEmpiricalSemivariogram;
 	Gtk::Grid gridBinningSemivariogram,gridSetupBinningSemivariogram;
@@ -30,9 +31,9 @@ private:
 	Gtk::Button buttonRamdomValues,buttonSetValue,buttonLoadValuesTable,buttonGenerateMatrixImage;
 	Gtk::Button buttonThreadDistances,buttonThreadDiference,buttonThreadSemivariance,buttonCalcSemivariogramEmpirical;
 	Gtk::Button buttonCalcBinningSemivariogram;
-	PlotValues plot;
+	PlotValues plot,plotMatrixData;
 	Kriging krigin;
-	
+	Gtk::Window windowMatrix;
 
 protected:
 	Gtk::Box m_VBox;
@@ -46,6 +47,7 @@ protected:
 	ModelColumns m_ColumnsSemivariogram;
 	ModelColumns m_ColumnsAverageSemivariogram;
 	
+	//Gtk::ScrolledWindow plotScrolledWindow;
 	Gtk::ScrolledWindow m_ScrolledWindow;
 	Gtk::ScrolledWindow m_ScrolledWindowSemivariogram;
 	Gtk::ScrolledWindow m_ScrolledWindowAverageSemivariogram;
@@ -59,6 +61,7 @@ protected:
 	Glib::RefPtr<Gtk::ListStore> m_refTreeModelAverageSemivariogram;
 	
 	void on_buttonRamdomValues_click();
+	void on_buttonGenerateMatrix_click();
 	void on_buttonCalcSemivariogram_click();
 	void on_buttonCalcAverageSemivariogram_click();
 	
