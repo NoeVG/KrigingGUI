@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/src_GUI_PlotValues.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_PlotValues.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix) 
 
 
 
@@ -91,6 +91,14 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix): src/GUI/ModelColumns.cpp $(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/src/GUI/ModelColumns.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix): src/GUI/ModelColumns.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix) -MM src/GUI/ModelColumns.cpp
+
+$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(PreprocessSuffix): src/GUI/ModelColumns.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(PreprocessSuffix) src/GUI/ModelColumns.cpp
+
 $(IntermediateDirectory)/src_GUI_PlotValues.cpp$(ObjectSuffix): src/GUI/PlotValues.cpp $(IntermediateDirectory)/src_GUI_PlotValues.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/src/GUI/PlotValues.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_PlotValues.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_GUI_PlotValues.cpp$(DependSuffix): src/GUI/PlotValues.cpp
@@ -98,14 +106,6 @@ $(IntermediateDirectory)/src_GUI_PlotValues.cpp$(DependSuffix): src/GUI/PlotValu
 
 $(IntermediateDirectory)/src_GUI_PlotValues.cpp$(PreprocessSuffix): src/GUI/PlotValues.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_PlotValues.cpp$(PreprocessSuffix) src/GUI/PlotValues.cpp
-
-$(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix): src/GUI/Kriging.cpp $(IntermediateDirectory)/src_GUI_Kriging.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/src/GUI/Kriging.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_GUI_Kriging.cpp$(DependSuffix): src/GUI/Kriging.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GUI_Kriging.cpp$(DependSuffix) -MM src/GUI/Kriging.cpp
-
-$(IntermediateDirectory)/src_GUI_Kriging.cpp$(PreprocessSuffix): src/GUI/Kriging.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_Kriging.cpp$(PreprocessSuffix) src/GUI/Kriging.cpp
 
 $(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix): src/GUI/WindowGUI.cpp $(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/src/GUI/WindowGUI.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix) $(IncludePath)
@@ -131,13 +131,13 @@ $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(DependSuffix): src/GUI/ImageMa
 $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(PreprocessSuffix): src/GUI/ImageMatrix.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(PreprocessSuffix) src/GUI/ImageMatrix.cpp
 
-$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix): src/GUI/ModelColumns.cpp $(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/src/GUI/ModelColumns.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix): src/GUI/ModelColumns.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix) -MM src/GUI/ModelColumns.cpp
+$(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix): src/GUI/Kriging.cpp $(IntermediateDirectory)/src_GUI_Kriging.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/src/GUI/Kriging.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_GUI_Kriging.cpp$(DependSuffix): src/GUI/Kriging.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GUI_Kriging.cpp$(DependSuffix) -MM src/GUI/Kriging.cpp
 
-$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(PreprocessSuffix): src/GUI/ModelColumns.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(PreprocessSuffix) src/GUI/ModelColumns.cpp
+$(IntermediateDirectory)/src_GUI_Kriging.cpp$(PreprocessSuffix): src/GUI/Kriging.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_Kriging.cpp$(PreprocessSuffix) src/GUI/Kriging.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
