@@ -249,10 +249,9 @@ dataComputedVBox(Gtk::ORIENTATION_VERTICAL),
 	m_VBox.add(dataComputedFrame);
 	
 	graphicModelFrame.set_label("Graphic Model");
-	ImageMatrix myArea;
-	//graphicModelFrame.add(myArea);
+	graphicModelFrame.set_size_request(500,400);
+	graphicModelFrame.add(plot);
 	m_VBox.add(graphicModelFrame);
-	
 	mainFrame.add(m_VBox);
 	
 	add(mainFrame);
@@ -325,4 +324,10 @@ void WindowGUI::on_buttonCalcAverageSemivariogram_click()
 		rowAverageSemivariogram[m_ColumnsAverageSemivariogram.m_col_ValeC] = krigin.getDatosExponentialModelFunction().at(index);
 		rowAverageSemivariogram = *(m_refTreeModelAverageSemivariogram->append());
 	}
+	
+
 }
+
+
+
+

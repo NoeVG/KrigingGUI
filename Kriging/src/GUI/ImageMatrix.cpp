@@ -12,7 +12,7 @@ bool ImageMatrix::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 {
 
 	// Draw a black rectangle
-  cr->set_source_rgb(0.0, 0.0, 0.0);
+  cr->set_source_rgb(255, 255, 255);
 				// rectangle_width, rectangle_height
   draw_rectangle(cr, 100, 100);
 }

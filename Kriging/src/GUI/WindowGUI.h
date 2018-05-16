@@ -2,7 +2,7 @@
 #define WINDOWGUI_H
 
 #include <gtkmm.h>
-#include "ImageMatrix.h"
+#include "PlotValues.h"
 #include "ModelColumns.h"
 #include "Kriging.h"
 #include <iostream>
@@ -30,11 +30,11 @@ private:
 	Gtk::Button buttonRamdomValues,buttonSetValue,buttonLoadValuesTable,buttonGenerateMatrixImage;
 	Gtk::Button buttonThreadDistances,buttonThreadDiference,buttonThreadSemivariance,buttonCalcSemivariogramEmpirical;
 	Gtk::Button buttonCalcBinningSemivariogram;
-	//Gtk::DrawingArea myArea;
+	PlotValues plot;
 	Kriging krigin;
+	
 
 protected:
-	//Gtk::DrawingArea myArea;
 	Gtk::Box m_VBox;
 	Gtk::Box dataVBox,dataComputedVBox;
 	
@@ -61,8 +61,8 @@ protected:
 	void on_buttonRamdomValues_click();
 	void on_buttonCalcSemivariogram_click();
 	void on_buttonCalcAverageSemivariogram_click();
-	//Override default signal handler:
-	//bool on_draw(const Cairo::RefPtr<Cairo::Context>& cr) override;
+	
+	
 	
 };
 

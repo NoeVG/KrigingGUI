@@ -5,16 +5,16 @@
 ## Release
 ProjectName            :=Kriging
 ConfigurationName      :=Release
-WorkspacePath          :=/media/eon/Archivos/proyectosGit/GEOSTATISTICAL_ANALYSIS_GUI
-ProjectPath            :=/media/eon/Archivos/proyectosGit/GEOSTATISTICAL_ANALYSIS_GUI/Kriging
+WorkspacePath          :=/media/noe/Archivos/proyectosGit/KrigingGUI
+ProjectPath            :=/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging
 IntermediateDirectory  :=./Release
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=eon
+User                   :=noe
 Date                   :=16/05/18
-CodeLitePath           :=/home/eon/.codelite
+CodeLitePath           :=/home/noe/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
 ObjectSuffix           :=.o
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_GUI_PlotValues.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) 
 
 
 
@@ -91,45 +91,53 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix): src/GUI/WindowGUI.cpp $(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/eon/Archivos/proyectosGit/GEOSTATISTICAL_ANALYSIS_GUI/Kriging/src/GUI/WindowGUI.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(DependSuffix): src/GUI/WindowGUI.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(DependSuffix) -MM src/GUI/WindowGUI.cpp
+$(IntermediateDirectory)/src_GUI_PlotValues.cpp$(ObjectSuffix): src/GUI/PlotValues.cpp $(IntermediateDirectory)/src_GUI_PlotValues.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/src/GUI/PlotValues.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_PlotValues.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_GUI_PlotValues.cpp$(DependSuffix): src/GUI/PlotValues.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GUI_PlotValues.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GUI_PlotValues.cpp$(DependSuffix) -MM src/GUI/PlotValues.cpp
 
-$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(PreprocessSuffix): src/GUI/WindowGUI.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(PreprocessSuffix) src/GUI/WindowGUI.cpp
-
-$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix): src/GUI/ModelColumns.cpp $(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/eon/Archivos/proyectosGit/GEOSTATISTICAL_ANALYSIS_GUI/Kriging/src/GUI/ModelColumns.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix): src/GUI/ModelColumns.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix) -MM src/GUI/ModelColumns.cpp
-
-$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(PreprocessSuffix): src/GUI/ModelColumns.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(PreprocessSuffix) src/GUI/ModelColumns.cpp
-
-$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/eon/Archivos/proyectosGit/GEOSTATISTICAL_ANALYSIS_GUI/Kriging/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
-
-$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+$(IntermediateDirectory)/src_GUI_PlotValues.cpp$(PreprocessSuffix): src/GUI/PlotValues.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_PlotValues.cpp$(PreprocessSuffix) src/GUI/PlotValues.cpp
 
 $(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix): src/GUI/Kriging.cpp $(IntermediateDirectory)/src_GUI_Kriging.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/eon/Archivos/proyectosGit/GEOSTATISTICAL_ANALYSIS_GUI/Kriging/src/GUI/Kriging.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/src/GUI/Kriging.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_GUI_Kriging.cpp$(DependSuffix): src/GUI/Kriging.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GUI_Kriging.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GUI_Kriging.cpp$(DependSuffix) -MM src/GUI/Kriging.cpp
 
 $(IntermediateDirectory)/src_GUI_Kriging.cpp$(PreprocessSuffix): src/GUI/Kriging.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_Kriging.cpp$(PreprocessSuffix) src/GUI/Kriging.cpp
 
+$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix): src/GUI/WindowGUI.cpp $(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/src/GUI/WindowGUI.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(DependSuffix): src/GUI/WindowGUI.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(DependSuffix) -MM src/GUI/WindowGUI.cpp
+
+$(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(PreprocessSuffix): src/GUI/WindowGUI.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_WindowGUI.cpp$(PreprocessSuffix) src/GUI/WindowGUI.cpp
+
+$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
+
+$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
 $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(ObjectSuffix): src/GUI/ImageMatrix.cpp $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/eon/Archivos/proyectosGit/GEOSTATISTICAL_ANALYSIS_GUI/Kriging/src/GUI/ImageMatrix.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/src/GUI/ImageMatrix.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(DependSuffix): src/GUI/ImageMatrix.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(DependSuffix) -MM src/GUI/ImageMatrix.cpp
 
 $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(PreprocessSuffix): src/GUI/ImageMatrix.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_ImageMatrix.cpp$(PreprocessSuffix) src/GUI/ImageMatrix.cpp
+
+$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix): src/GUI/ModelColumns.cpp $(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/media/noe/Archivos/proyectosGit/KrigingGUI/Kriging/src/GUI/ModelColumns.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix): src/GUI/ModelColumns.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(DependSuffix) -MM src/GUI/ModelColumns.cpp
+
+$(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(PreprocessSuffix): src/GUI/ModelColumns.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GUI_ModelColumns.cpp$(PreprocessSuffix) src/GUI/ModelColumns.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

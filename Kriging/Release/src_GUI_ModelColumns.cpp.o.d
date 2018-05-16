@@ -39,6 +39,8 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/glib-2.0/glib/gmappedfile.h \
  /usr/include/glib-2.0/glib/gmarkup.h \
  /usr/include/glib-2.0/glib/gmessages.h \
+ /usr/include/glib-2.0/glib/gvariant.h \
+ /usr/include/glib-2.0/glib/gvarianttype.h \
  /usr/include/glib-2.0/glib/goption.h \
  /usr/include/glib-2.0/glib/gpattern.h \
  /usr/include/glib-2.0/glib/gprimes.h /usr/include/glib-2.0/glib/gqsort.h \
@@ -56,9 +58,7 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/glib-2.0/glib/gtrashstack.h \
  /usr/include/glib-2.0/glib/gtree.h \
  /usr/include/glib-2.0/glib/gurifuncs.h \
- /usr/include/glib-2.0/glib/gvarianttype.h \
- /usr/include/glib-2.0/glib/gvariant.h \
- /usr/include/glib-2.0/glib/gversion.h \
+ /usr/include/glib-2.0/glib/guuid.h /usr/include/glib-2.0/glib/gversion.h \
  /usr/include/glib-2.0/glib/deprecated/gallocator.h \
  /usr/include/glib-2.0/glib/deprecated/gcache.h \
  /usr/include/glib-2.0/glib/deprecated/gcompletion.h \
@@ -125,6 +125,7 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/glib-2.0/gobject/gvaluetypes.h \
  /usr/include/glib-2.0/gobject/gobject-autocleanups.h \
  /usr/include/glibmm-2.4/glibmm/variantiter.h \
+ /usr/include/glibmm-2.4/glibmm/variantdbusstring.h \
  /usr/include/glibmm-2.4/glibmm/variant_basictypes.h \
  /usr/include/glibmm-2.4/glibmm/wrap.h \
  /usr/include/glibmm-2.4/glibmm/objectbase.h \
@@ -134,6 +135,7 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/glibmm-2.4/glibmm/propertyproxy.h \
  /usr/include/glibmm-2.4/glibmm/propertyproxy_base.h \
  /usr/include/glibmm-2.4/glibmm/value.h \
+ /usr/include/glibmm-2.4/glibmm/enums.h \
  /usr/include/glibmm-2.4/glibmm/value_custom.h \
  /usr/include/glibmm-2.4/glibmm/value_basictypes.h \
  /usr/include/glibmm-2.4/glibmm/quark.h \
@@ -187,8 +189,9 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/glibmm-2.4/glibmm/variantdict.h \
  /usr/include/glibmm-2.4/glibmm/vectorutils.h \
  /usr/include/glibmm-2.4/glibmm/weakref.h /usr/include/giomm-2.4/giomm.h \
- /usr/include/giomm-2.4/giomm/action.h /usr/include/glib-2.0/gio/gio.h \
- /usr/include/glib-2.0/gio/giotypes.h \
+ /usr/include/giomm-2.4/giomm/action.h \
+ /usr/lib/x86_64-linux-gnu/giomm-2.4/include/giommconfig.h \
+ /usr/include/glib-2.0/gio/gio.h /usr/include/glib-2.0/gio/giotypes.h \
  /usr/include/glib-2.0/gio/gioenums.h /usr/include/glib-2.0/gio/gaction.h \
  /usr/include/glib-2.0/gio/gactiongroup.h \
  /usr/include/glib-2.0/gio/gactiongroupexporter.h \
@@ -337,15 +340,14 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/giomm-2.4/giomm/appinfo.h \
  /usr/include/giomm-2.4/giomm/applaunchcontext.h \
  /usr/include/giomm-2.4/giomm/icon.h \
+ /usr/include/giomm-2.4/giomm/asyncresult.h \
+ /usr/include/giomm-2.4/giomm/cancellable.h \
  /usr/include/giomm-2.4/giomm/application.h \
- /usr/lib/x86_64-linux-gnu/giomm-2.4/include/giommconfig.h \
  /usr/include/giomm-2.4/giomm/applicationcommandline.h \
  /usr/include/giomm-2.4/giomm/file.h \
- /usr/include/giomm-2.4/giomm/asyncresult.h \
  /usr/include/giomm-2.4/giomm/fileattributeinfolist.h \
  /usr/include/giomm-2.4/giomm/fileattributeinfo.h \
  /usr/include/giomm-2.4/giomm/fileenumerator.h \
- /usr/include/giomm-2.4/giomm/cancellable.h \
  /usr/include/giomm-2.4/giomm/fileinfo.h \
  /usr/include/giomm-2.4/giomm/fileinputstream.h \
  /usr/include/giomm-2.4/giomm/inputstream.h \
@@ -412,6 +414,8 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/giomm-2.4/giomm/socketaddressenumerator.h \
  /usr/include/giomm-2.4/giomm/init.h \
  /usr/include/giomm-2.4/giomm/wrap_init.h \
+ /usr/include/giomm-2.4/giomm/listmodel.h \
+ /usr/include/giomm-2.4/giomm/liststore.h \
  /usr/include/giomm-2.4/giomm/memoryinputstream.h \
  /usr/include/giomm-2.4/giomm/memoryoutputstream.h \
  /usr/include/giomm-2.4/giomm/menu.h \
@@ -430,6 +434,7 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/giomm-2.4/giomm/settings.h \
  /usr/include/giomm-2.4/giomm/settingsschema.h \
  /usr/include/giomm-2.4/giomm/settingsschemakey.h \
+ /usr/include/giomm-2.4/giomm/settingsschemasource.h \
  /usr/include/giomm-2.4/giomm/simpleactiongroup.h \
  /usr/include/giomm-2.4/giomm/simpleiostream.h \
  /usr/include/giomm-2.4/giomm/simplepermission.h \
@@ -472,6 +477,8 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/pango-1.0/pango/pango-attributes.h \
  /usr/include/pango-1.0/pango/pango-font.h \
  /usr/include/pango-1.0/pango/pango-coverage.h \
+ /usr/include/pango-1.0/pango/pango-version-macros.h \
+ /usr/include/pango-1.0/pango/pango-features.h \
  /usr/include/pango-1.0/pango/pango-types.h \
  /usr/include/pango-1.0/pango/pango-gravity.h \
  /usr/include/pango-1.0/pango/pango-matrix.h \
@@ -486,7 +493,6 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/pango-1.0/pango/pango-engine.h \
  /usr/include/pango-1.0/pango/pango-glyph.h \
  /usr/include/pango-1.0/pango/pango-enum-types.h \
- /usr/include/pango-1.0/pango/pango-features.h \
  /usr/include/pango-1.0/pango/pango-glyph-item.h \
  /usr/include/pango-1.0/pango/pango-layout.h \
  /usr/include/pango-1.0/pango/pango-tabs.h \
@@ -498,11 +504,19 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/gtk-3.0/gdk/gdkdisplay.h \
  /usr/include/gtk-3.0/gdk/gdkevents.h /usr/include/gtk-3.0/gdk/gdkdnd.h \
  /usr/include/gtk-3.0/gdk/gdkdevice.h \
+ /usr/include/gtk-3.0/gdk/gdkdevicetool.h \
  /usr/include/gtk-3.0/gdk/gdkdevicemanager.h \
+ /usr/include/gtk-3.0/gdk/gdkseat.h /usr/include/gtk-3.0/gdk/gdkwindow.h \
+ /usr/include/gtk-3.0/gdk/gdkdrawingcontext.h \
+ /usr/include/gtk-3.0/gdk/gdkframeclock.h \
+ /usr/include/gtk-3.0/gdk/gdkframetimings.h \
+ /usr/include/gtk-3.0/gdk/gdkmonitor.h \
+ /usr/include/gtk-3.0/gdk/gdkrectangle.h \
  /usr/include/gtk-3.0/gdk/gdkcairo.h \
  /usr/include/gtk-3.0/gdk/deprecated/gdkcolor.h \
  /usr/include/gtk-3.0/gdk/gdkrgba.h /usr/include/gtk-3.0/gdk/gdkpixbuf.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h \
+ /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-macros.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-features.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h \
@@ -514,18 +528,15 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h \
  /usr/include/pango-1.0/pango/pangocairo.h \
  /usr/include/gtk-3.0/gdk/gdkcursor.h \
+ /usr/include/gtk-3.0/gdk/gdkdevicepad.h \
  /usr/include/gtk-3.0/gdk/gdkdisplaymanager.h \
  /usr/include/gtk-3.0/gdk/gdkenumtypes.h \
- /usr/include/gtk-3.0/gdk/gdkframeclock.h \
- /usr/include/gtk-3.0/gdk/gdkframetimings.h \
  /usr/include/gtk-3.0/gdk/gdkglcontext.h \
  /usr/include/gtk-3.0/gdk/gdkkeys.h /usr/include/gtk-3.0/gdk/gdkkeysyms.h \
  /usr/include/gtk-3.0/gdk/gdkmain.h /usr/include/gtk-3.0/gdk/gdkpango.h \
  /usr/include/gtk-3.0/gdk/gdkproperty.h \
- /usr/include/gtk-3.0/gdk/gdkrectangle.h \
  /usr/include/gtk-3.0/gdk/gdkselection.h \
  /usr/include/gtk-3.0/gdk/gdktestutils.h \
- /usr/include/gtk-3.0/gdk/gdkwindow.h \
  /usr/include/gtk-3.0/gdk/gdkthreads.h \
  /usr/include/gtk-3.0/gdk/gdkvisual.h \
  /usr/include/gtk-3.0/gdk/gdk-autocleanup.h \
@@ -538,6 +549,8 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/freetype2/freetype/config/ftheader.h \
  /usr/include/freetype2/freetype/freetype.h \
  /usr/include/freetype2/freetype/config/ftconfig.h \
+ /usr/include/freetype2/freetype/config/ftoption.h \
+ /usr/include/freetype2/freetype/config/ftstdlib.h \
  /usr/include/freetype2/freetype/fttypes.h \
  /usr/include/freetype2/freetype/ftsystem.h \
  /usr/include/freetype2/freetype/ftimage.h \
@@ -571,9 +584,12 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/gdkmm-3.0/gdkmm/pixbufanimation.h \
  /usr/include/gdkmm-3.0/gdkmm/pixbufanimationiter.h \
  /usr/include/gdkmm-3.0/gdkmm/pixbufloader.h \
+ /usr/include/gdkmm-3.0/gdkmm/drawingcontext.h \
  /usr/include/gdkmm-3.0/gdkmm/glcontext.h \
  /usr/include/gdkmm-3.0/gdkmm/displaymanager.h \
  /usr/include/gdkmm-3.0/gdkmm/devicemanager.h \
+ /usr/include/gdkmm-3.0/gdkmm/seat.h \
+ /usr/include/gdkmm-3.0/gdkmm/monitor.h \
  /usr/include/gdkmm-3.0/gdkmm/general.h \
  /usr/include/gtkmm-3.0/gtkmm/toggleaction.h \
  /usr/include/gtkmm-3.0/gtkmm/action.h \
@@ -688,6 +704,7 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/gtk-3.0/gtk/gtktreemodelfilter.h \
  /usr/include/gtk-3.0/gtk/gtkimage.h \
  /usr/include/gtk-3.0/gtk/gtkapplicationwindow.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutswindow.h \
  /usr/include/gtk-3.0/gtk/gtkaspectframe.h \
  /usr/include/gtk-3.0/gtk/gtkframe.h \
  /usr/include/gtk-3.0/gtk/gtkassistant.h \
@@ -723,6 +740,8 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/gtk-3.0/gtk/gtkcssprovider.h \
  /usr/include/gtk-3.0/gtk/gtkcsssection.h \
  /usr/include/gtk-3.0/gtk/gtkdebug.h \
+ /usr/include/gtk-3.0/gtk/gtkdragdest.h \
+ /usr/include/gtk-3.0/gtk/gtkdragsource.h \
  /usr/include/gtk-3.0/gtk/gtkdrawingarea.h \
  /usr/include/gtk-3.0/gtk/gtkeventbox.h \
  /usr/include/gtk-3.0/gtk/gtkeventcontroller.h \
@@ -732,6 +751,8 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/gtk-3.0/gtk/gtkfilefilter.h \
  /usr/include/gtk-3.0/gtk/gtkfilechooserbutton.h \
  /usr/include/gtk-3.0/gtk/gtkfilechooserdialog.h \
+ /usr/include/gtk-3.0/gtk/gtkfilechoosernative.h \
+ /usr/include/gtk-3.0/gtk/gtknativedialog.h \
  /usr/include/gtk-3.0/gtk/gtkfilechooserwidget.h \
  /usr/include/gtk-3.0/gtk/gtkflowbox.h \
  /usr/include/gtk-3.0/gtk/gtkfontbutton.h \
@@ -781,6 +802,7 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/gtk-3.0/gtk/gtkoffscreenwindow.h \
  /usr/include/gtk-3.0/gtk/gtkorientable.h \
  /usr/include/gtk-3.0/gtk/gtkoverlay.h \
+ /usr/include/gtk-3.0/gtk/gtkpadcontroller.h \
  /usr/include/gtk-3.0/gtk/gtkpagesetup.h \
  /usr/include/gtk-3.0/gtk/gtkpapersize.h \
  /usr/include/gtk-3.0/gtk/gtkpaned.h \
@@ -815,6 +837,10 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/gtk-3.0/gtk/gtkseparatormenuitem.h \
  /usr/include/gtk-3.0/gtk/gtkseparatortoolitem.h \
  /usr/include/gtk-3.0/gtk/gtksettings.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutlabel.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutsgroup.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutssection.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutsshortcut.h \
  /usr/include/gtk-3.0/gtk/gtkshow.h \
  /usr/include/gtk-3.0/gtk/gtkstacksidebar.h \
  /usr/include/gtk-3.0/gtk/gtkstack.h \
@@ -1081,6 +1107,11 @@ Release/src_GUI_ModelColumns.cpp.o: src/GUI/ModelColumns.cpp \
  /usr/include/gtkmm-3.0/gtkmm/settings.h \
  /usr/include/gtkmm-3.0/gtkmm/toolbar.h \
  /usr/include/gtkmm-3.0/gtkmm/toolshell.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutlabel.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutsgroup.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutssection.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutsshortcut.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutswindow.h \
  /usr/include/gtkmm-3.0/gtkmm/spinbutton.h \
  /usr/include/gtkmm-3.0/gtkmm/spinner.h \
  /usr/include/gtkmm-3.0/gtkmm/stack.h \
@@ -1217,6 +1248,10 @@ src/GUI/ModelColumns.h:
 
 /usr/include/glib-2.0/glib/gmessages.h:
 
+/usr/include/glib-2.0/glib/gvariant.h:
+
+/usr/include/glib-2.0/glib/gvarianttype.h:
+
 /usr/include/glib-2.0/glib/goption.h:
 
 /usr/include/glib-2.0/glib/gpattern.h:
@@ -1257,9 +1292,7 @@ src/GUI/ModelColumns.h:
 
 /usr/include/glib-2.0/glib/gurifuncs.h:
 
-/usr/include/glib-2.0/glib/gvarianttype.h:
-
-/usr/include/glib-2.0/glib/gvariant.h:
+/usr/include/glib-2.0/glib/guuid.h:
 
 /usr/include/glib-2.0/glib/gversion.h:
 
@@ -1395,6 +1428,8 @@ src/GUI/ModelColumns.h:
 
 /usr/include/glibmm-2.4/glibmm/variantiter.h:
 
+/usr/include/glibmm-2.4/glibmm/variantdbusstring.h:
+
 /usr/include/glibmm-2.4/glibmm/variant_basictypes.h:
 
 /usr/include/glibmm-2.4/glibmm/wrap.h:
@@ -1412,6 +1447,8 @@ src/GUI/ModelColumns.h:
 /usr/include/glibmm-2.4/glibmm/propertyproxy_base.h:
 
 /usr/include/glibmm-2.4/glibmm/value.h:
+
+/usr/include/glibmm-2.4/glibmm/enums.h:
 
 /usr/include/glibmm-2.4/glibmm/value_custom.h:
 
@@ -1522,6 +1559,8 @@ src/GUI/ModelColumns.h:
 /usr/include/giomm-2.4/giomm.h:
 
 /usr/include/giomm-2.4/giomm/action.h:
+
+/usr/lib/x86_64-linux-gnu/giomm-2.4/include/giommconfig.h:
 
 /usr/include/glib-2.0/gio/gio.h:
 
@@ -1835,23 +1874,21 @@ src/GUI/ModelColumns.h:
 
 /usr/include/giomm-2.4/giomm/icon.h:
 
-/usr/include/giomm-2.4/giomm/application.h:
+/usr/include/giomm-2.4/giomm/asyncresult.h:
 
-/usr/lib/x86_64-linux-gnu/giomm-2.4/include/giommconfig.h:
+/usr/include/giomm-2.4/giomm/cancellable.h:
+
+/usr/include/giomm-2.4/giomm/application.h:
 
 /usr/include/giomm-2.4/giomm/applicationcommandline.h:
 
 /usr/include/giomm-2.4/giomm/file.h:
-
-/usr/include/giomm-2.4/giomm/asyncresult.h:
 
 /usr/include/giomm-2.4/giomm/fileattributeinfolist.h:
 
 /usr/include/giomm-2.4/giomm/fileattributeinfo.h:
 
 /usr/include/giomm-2.4/giomm/fileenumerator.h:
-
-/usr/include/giomm-2.4/giomm/cancellable.h:
 
 /usr/include/giomm-2.4/giomm/fileinfo.h:
 
@@ -1985,6 +2022,10 @@ src/GUI/ModelColumns.h:
 
 /usr/include/giomm-2.4/giomm/wrap_init.h:
 
+/usr/include/giomm-2.4/giomm/listmodel.h:
+
+/usr/include/giomm-2.4/giomm/liststore.h:
+
 /usr/include/giomm-2.4/giomm/memoryinputstream.h:
 
 /usr/include/giomm-2.4/giomm/memoryoutputstream.h:
@@ -2020,6 +2061,8 @@ src/GUI/ModelColumns.h:
 /usr/include/giomm-2.4/giomm/settingsschema.h:
 
 /usr/include/giomm-2.4/giomm/settingsschemakey.h:
+
+/usr/include/giomm-2.4/giomm/settingsschemasource.h:
 
 /usr/include/giomm-2.4/giomm/simpleactiongroup.h:
 
@@ -2109,6 +2152,10 @@ src/GUI/ModelColumns.h:
 
 /usr/include/pango-1.0/pango/pango-coverage.h:
 
+/usr/include/pango-1.0/pango/pango-version-macros.h:
+
+/usr/include/pango-1.0/pango/pango-features.h:
+
 /usr/include/pango-1.0/pango/pango-types.h:
 
 /usr/include/pango-1.0/pango/pango-gravity.h:
@@ -2136,8 +2183,6 @@ src/GUI/ModelColumns.h:
 /usr/include/pango-1.0/pango/pango-glyph.h:
 
 /usr/include/pango-1.0/pango/pango-enum-types.h:
-
-/usr/include/pango-1.0/pango/pango-features.h:
 
 /usr/include/pango-1.0/pango/pango-glyph-item.h:
 
@@ -2167,7 +2212,23 @@ src/GUI/ModelColumns.h:
 
 /usr/include/gtk-3.0/gdk/gdkdevice.h:
 
+/usr/include/gtk-3.0/gdk/gdkdevicetool.h:
+
 /usr/include/gtk-3.0/gdk/gdkdevicemanager.h:
+
+/usr/include/gtk-3.0/gdk/gdkseat.h:
+
+/usr/include/gtk-3.0/gdk/gdkwindow.h:
+
+/usr/include/gtk-3.0/gdk/gdkdrawingcontext.h:
+
+/usr/include/gtk-3.0/gdk/gdkframeclock.h:
+
+/usr/include/gtk-3.0/gdk/gdkframetimings.h:
+
+/usr/include/gtk-3.0/gdk/gdkmonitor.h:
+
+/usr/include/gtk-3.0/gdk/gdkrectangle.h:
 
 /usr/include/gtk-3.0/gdk/gdkcairo.h:
 
@@ -2178,6 +2239,8 @@ src/GUI/ModelColumns.h:
 /usr/include/gtk-3.0/gdk/gdkpixbuf.h:
 
 /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:
+
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-macros.h:
 
 /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-features.h:
 
@@ -2201,13 +2264,11 @@ src/GUI/ModelColumns.h:
 
 /usr/include/gtk-3.0/gdk/gdkcursor.h:
 
+/usr/include/gtk-3.0/gdk/gdkdevicepad.h:
+
 /usr/include/gtk-3.0/gdk/gdkdisplaymanager.h:
 
 /usr/include/gtk-3.0/gdk/gdkenumtypes.h:
-
-/usr/include/gtk-3.0/gdk/gdkframeclock.h:
-
-/usr/include/gtk-3.0/gdk/gdkframetimings.h:
 
 /usr/include/gtk-3.0/gdk/gdkglcontext.h:
 
@@ -2221,13 +2282,9 @@ src/GUI/ModelColumns.h:
 
 /usr/include/gtk-3.0/gdk/gdkproperty.h:
 
-/usr/include/gtk-3.0/gdk/gdkrectangle.h:
-
 /usr/include/gtk-3.0/gdk/gdkselection.h:
 
 /usr/include/gtk-3.0/gdk/gdktestutils.h:
-
-/usr/include/gtk-3.0/gdk/gdkwindow.h:
 
 /usr/include/gtk-3.0/gdk/gdkthreads.h:
 
@@ -2256,6 +2313,10 @@ src/GUI/ModelColumns.h:
 /usr/include/freetype2/freetype/freetype.h:
 
 /usr/include/freetype2/freetype/config/ftconfig.h:
+
+/usr/include/freetype2/freetype/config/ftoption.h:
+
+/usr/include/freetype2/freetype/config/ftstdlib.h:
 
 /usr/include/freetype2/freetype/fttypes.h:
 
@@ -2329,11 +2390,17 @@ src/GUI/ModelColumns.h:
 
 /usr/include/gdkmm-3.0/gdkmm/pixbufloader.h:
 
+/usr/include/gdkmm-3.0/gdkmm/drawingcontext.h:
+
 /usr/include/gdkmm-3.0/gdkmm/glcontext.h:
 
 /usr/include/gdkmm-3.0/gdkmm/displaymanager.h:
 
 /usr/include/gdkmm-3.0/gdkmm/devicemanager.h:
+
+/usr/include/gdkmm-3.0/gdkmm/seat.h:
+
+/usr/include/gdkmm-3.0/gdkmm/monitor.h:
 
 /usr/include/gdkmm-3.0/gdkmm/general.h:
 
@@ -2577,6 +2644,8 @@ src/GUI/ModelColumns.h:
 
 /usr/include/gtk-3.0/gtk/gtkapplicationwindow.h:
 
+/usr/include/gtk-3.0/gtk/gtkshortcutswindow.h:
+
 /usr/include/gtk-3.0/gtk/gtkaspectframe.h:
 
 /usr/include/gtk-3.0/gtk/gtkframe.h:
@@ -2647,6 +2716,10 @@ src/GUI/ModelColumns.h:
 
 /usr/include/gtk-3.0/gtk/gtkdebug.h:
 
+/usr/include/gtk-3.0/gtk/gtkdragdest.h:
+
+/usr/include/gtk-3.0/gtk/gtkdragsource.h:
+
 /usr/include/gtk-3.0/gtk/gtkdrawingarea.h:
 
 /usr/include/gtk-3.0/gtk/gtkeventbox.h:
@@ -2664,6 +2737,10 @@ src/GUI/ModelColumns.h:
 /usr/include/gtk-3.0/gtk/gtkfilechooserbutton.h:
 
 /usr/include/gtk-3.0/gtk/gtkfilechooserdialog.h:
+
+/usr/include/gtk-3.0/gtk/gtkfilechoosernative.h:
+
+/usr/include/gtk-3.0/gtk/gtknativedialog.h:
 
 /usr/include/gtk-3.0/gtk/gtkfilechooserwidget.h:
 
@@ -2767,6 +2844,8 @@ src/GUI/ModelColumns.h:
 
 /usr/include/gtk-3.0/gtk/gtkoverlay.h:
 
+/usr/include/gtk-3.0/gtk/gtkpadcontroller.h:
+
 /usr/include/gtk-3.0/gtk/gtkpagesetup.h:
 
 /usr/include/gtk-3.0/gtk/gtkpapersize.h:
@@ -2834,6 +2913,14 @@ src/GUI/ModelColumns.h:
 /usr/include/gtk-3.0/gtk/gtkseparatortoolitem.h:
 
 /usr/include/gtk-3.0/gtk/gtksettings.h:
+
+/usr/include/gtk-3.0/gtk/gtkshortcutlabel.h:
+
+/usr/include/gtk-3.0/gtk/gtkshortcutsgroup.h:
+
+/usr/include/gtk-3.0/gtk/gtkshortcutssection.h:
+
+/usr/include/gtk-3.0/gtk/gtkshortcutsshortcut.h:
 
 /usr/include/gtk-3.0/gtk/gtkshow.h:
 
@@ -3370,6 +3457,16 @@ src/GUI/ModelColumns.h:
 /usr/include/gtkmm-3.0/gtkmm/toolbar.h:
 
 /usr/include/gtkmm-3.0/gtkmm/toolshell.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutlabel.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutsgroup.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutssection.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutsshortcut.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutswindow.h:
 
 /usr/include/gtkmm-3.0/gtkmm/spinbutton.h:
 

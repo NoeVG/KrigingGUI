@@ -9,6 +9,8 @@
   <Dependencies/>
   <VirtualDirectory Name="src">
     <VirtualDirectory Name="GUI">
+      <File Name="src/GUI/PlotValues.cpp"/>
+      <File Name="src/GUI/PlotValues.h"/>
       <File Name="src/GUI/Kriging.cpp"/>
       <File Name="src/GUI/Kriging.h"/>
       <File Name="src/GUI/ImageMatrix.cpp"/>
