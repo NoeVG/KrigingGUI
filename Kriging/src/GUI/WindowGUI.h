@@ -22,15 +22,18 @@ private:
 	Gtk::Frame mainFrame,dataFrame,dataRamdomFrame,tableFrame,dataComputedFrame,graphicModelFrame;
 	Gtk::Frame setupEmpiricalSemivariogramFrame,empiricalSemivariogramFrame,setupBinningSemivariogramFrame,binningSemivariogramFrame;
 	Gtk::Frame frameMatrix;
+	Gtk::Frame frameKrigingAproximation;
 	Gtk::Grid gridData,gridDataRamdom,gridDataTable,gridLoadDataTable;
 	Gtk::Grid gridSetupEmpiricalSemivariogram;
 	Gtk::Grid gridBinningSemivariogram,gridSetupBinningSemivariogram;
+	Gtk::Grid gridKrigingAproximation;
 	Gtk::Entry entryLocationX,entryLocationY,entryPropertyZ,entryRandomSize;
 	Gtk::Entry entryThreadsDistances,entryThreadsDiference,entryThreadsSemivariance;
 	Gtk::Entry entryThreadsAverageDistances,entryThreadsAverageSemivariance,entryBin;
 	Gtk::Button buttonRamdomValues,buttonSetValue,buttonLoadValuesTable,buttonGenerateMatrixImage;
 	Gtk::Button buttonThreadDistances,buttonThreadDiference,buttonThreadSemivariance,buttonCalcSemivariogramEmpirical;
 	Gtk::Button buttonCalcBinningSemivariogram;
+	Gtk::Button buttonCalcKrigin;
 	PlotValues plot,plotMatrixData;
 	Kriging krigin;
 	Gtk::Window windowMatrix;
@@ -43,6 +46,7 @@ protected:
 	Gtk::Label labelThreadDistance,labelThreadDiference,labelThreadSemivariance;
 	Gtk::Label labelThreadAverageDistance,labelThreadAverageSemivariance,labelBin;
 	
+	
 	ModelColumns m_ColumnsData;
 	ModelColumns m_ColumnsSemivariogram;
 	ModelColumns m_ColumnsAverageSemivariogram;
@@ -51,6 +55,7 @@ protected:
 	Gtk::ScrolledWindow m_ScrolledWindow;
 	Gtk::ScrolledWindow m_ScrolledWindowSemivariogram;
 	Gtk::ScrolledWindow m_ScrolledWindowAverageSemivariogram;
+	//Gtk::ScrolledWindow scrollWindowDataCompued;
 	
 	Gtk::TreeView m_TreeView;
 	Gtk::TreeView m_TreeViewSemivariogram;

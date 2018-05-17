@@ -13,8 +13,6 @@
       <File Name="src/GUI/PlotValues.h"/>
       <File Name="src/GUI/Kriging.cpp"/>
       <File Name="src/GUI/Kriging.h"/>
-      <File Name="src/GUI/ImageMatrix.cpp"/>
-      <File Name="src/GUI/ImageMatrix.h"/>
       <File Name="src/GUI/ModelColumns.cpp"/>
       <File Name="src/GUI/ModelColumns.h"/>
       <File Name="src/GUI/WindowGUI.cpp"/>

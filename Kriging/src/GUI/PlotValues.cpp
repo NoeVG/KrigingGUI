@@ -8,7 +8,10 @@ PlotValues::PlotValues()
 PlotValues::~PlotValues()
 {
 }
-
+void PlotValues::setOptionPlot(int opc)
+{
+	this->optionPlot = opc;
+}
 bool PlotValues::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 {
   Gtk::Allocation allocation = get_allocation();
@@ -27,7 +30,19 @@ bool PlotValues::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	
 	writeScaleAxis(cr,this->scaleUnitX,this->scaleUnitY);
 	
-	ploData(cr);
+	switch(this->optionPlot)
+	{
+		case 1 :
+		{
+			ploData(cr);
+			break;
+		}
+		case 2 :
+		{
+			plotPoints(cr);
+			break;
+		}
+	}
 	
   return true;
 }
@@ -236,7 +251,10 @@ void PlotValues::plotPoints(const Cairo::RefPtr<Cairo::Context>& cr)
 		
 		
 		std::cout<<dX<<"\t"<<dY<<std::endl;
-		drawCircle(cr,dX,height-dY,20,( (dZ*100) /255),( (dZ*100) /255),( (dZ*100) /255) ) ;
+		//drawCircle(cr,dX,height-dY,20,( (dZ) *255),( (dZ)*255),( (dZ)*255) ) ;
+															   //R G B
+	   std::cout<<"Valur B : "<<((this->dataExpo.at(index))*255)<<std::endl;
+		drawCircle(cr,dX,height-dY,this->dataExpo.at(index)*50,255,0,0 ) ;
 
 	}
 }

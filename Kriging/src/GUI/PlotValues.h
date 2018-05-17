@@ -17,7 +17,8 @@ public:
 	void force_redraw();
 	void setScaleUnitX(double);
 	void setScaleUnitY(double);
-
+	
+	void setOptionPlot(int);
 private:
 	void defineAxis(const Cairo::RefPtr<Cairo::Context>& cr,double,double);
 	void defineBackgroud(const Cairo::RefPtr<Cairo::Context>& cr,double,double);
@@ -37,6 +38,7 @@ private:
 	double scaleUnitX;
 	double scaleUnitY;
 	
+	int optionPlot;
 	
 	std::vector<double> tabulationX;
 	std::vector<double> tabulationY;

@@ -215,7 +215,7 @@ dataComputedVBox(Gtk::ORIENTATION_VERTICAL),
 	
 	
 	binningSemivariogramFrame.set_label("Binning Semivariogram");
-	binningSemivariogramFrame.set_size_request(300,200);
+	binningSemivariogramFrame.set_size_request(300,150);
 	
 			//Add the TreeView, inside a ScrolledWindow, with the button underneath:
 	m_ScrolledWindowAverageSemivariogram.add(m_TreeViewAverageSemivariogram);
@@ -247,12 +247,19 @@ dataComputedVBox(Gtk::ORIENTATION_VERTICAL),
 	
 	dataComputedVBox.add(binningSemivariogramFrame);
 	
+	frameKrigingAproximation.set_label("Setup Kriging");
+	frameKrigingAproximation.set_size_request(300,20);
+	frameKrigingAproximation.add(gridKrigingAproximation);
+	buttonCalcKrigin.set_size_request(350,50);
+	buttonCalcKrigin.set_label("Calculated kriging");
+	gridKrigingAproximation.add(buttonCalcKrigin);
+	dataComputedVBox.add(frameKrigingAproximation);
 	
 	dataComputedFrame.add(dataComputedVBox);
 	m_VBox.add(dataComputedFrame);
 	
 	graphicModelFrame.set_label("Graphic Model");
-	graphicModelFrame.set_size_request(800,400);
+	graphicModelFrame.set_size_request(600,500);
 	//plotScrolledWindow.add(plot);
 	//plotScrolledWindow.set_policy(Gtk::POLICY_AUTOMATIC, Gtk::POLICY_AUTOMATIC);
 	plot.setScaleUnitX(20);
@@ -261,6 +268,8 @@ dataComputedVBox(Gtk::ORIENTATION_VERTICAL),
 	graphicModelFrame.add(plot);
 	m_VBox.add(graphicModelFrame);
 	mainFrame.add(m_VBox);
+	
+	
 	
 	add(mainFrame);
 	
@@ -332,7 +341,7 @@ void WindowGUI::on_buttonCalcAverageSemivariogram_click()
 		rowAverageSemivariogram[m_ColumnsAverageSemivariogram.m_col_ValeC] = krigin.getDatosExponentialModelFunction().at(index);
 		rowAverageSemivariogram = *(m_refTreeModelAverageSemivariogram->append());
 	}
-	
+	plot.setOptionPlot(1);
 	plot.setDataX(krigin.getAverageDistance());
 	plot.setDataY(krigin.getAverageSemivariance());
 	plot.setDataExpo(krigin.getDatosExponentialModelFunction());
@@ -340,17 +349,16 @@ void WindowGUI::on_buttonCalcAverageSemivariogram_click()
 void WindowGUI::on_buttonGenerateMatrix_click()
 {
 	
-	
-	
 	frameMatrix.set_label("Matrix data");
 	frameMatrix.show();
 	
 	windowMatrix.set_title("Matrix data");
-	windowMatrix.set_size_request(400,400);
+	windowMatrix.set_size_request(680,700);
+	plotMatrixData.setOptionPlot(2);
 	plotMatrixData.setDataX(krigin.getValuesX());
 	plotMatrixData.setDataY(krigin.getValuesY());
 	plotMatrixData.setDataExpo(krigin.getValuesZ());
-	plotMatrixData.setScaleUnitX(100);
+	plotMatrixData.setScaleUnitX(50);
 	plotMatrixData.setScaleUnitY(50);
 	
 	frameMatrix.add(plotMatrixData);
